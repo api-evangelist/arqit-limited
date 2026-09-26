@@ -1,23 +1,77 @@
 aid: arqit-limited
+
 name: Arqit
-description: 'Arqit is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Arqit provides enterprise‑grade quantum security solutions that safeguard data against future quantum threats. Their platform enables
+  secure communications at scale, offering quantum‑resistant encryption, key management, and cryptographic services for enterprises seeking to
+  protect information from emerging quantum attacks. Arqit’s technology is built on quantum‑ready protocols and integrates with existing security
+  infrastructures to future‑proof data protection.
+
 url: https://raw.githubusercontent.com/api-evangelist/arqit-limited/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- QuantumSecurity
+- Encryption
+- Enterprise
+- Crypto
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arqit-limited-hosts.yml
+- type: Vendors
+  url: vendors/arqit-limited-vendors.yml
+- type: PrivacyPolicy
+  url: https://arqitgroup.com/privacy-policy
+- type: Newsroom
+  url: https://arqitgroup.com/news
+- type: Leadership
+  url: https://arqitgroup.com/leadership/nicola-barbiero
+- type: Blog
+  url: https://arqitgroup.com/resources/blog
+- type: APIReference
+  url: https://arqitgroup.com/resources/tag/reference
+- type: DomainSecurity
+  url: security/arqit-limited-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/arqit-limited_stock/
+  url: https://arqitgroup.com
+
+apis:
+- name: Arqit API
+  description: Arqit provides quantum‑resistant encryption and key management APIs as described in their resource reference pages.
+  humanURL: https://arqitgroup.com/resources/tag/reference
+  aid: arqit-limited:arqit-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Reference pages render via JavaScript and no machine‑readable OpenAPI spec was found.
+  evidence:
+  - url: https://arqitgroup.com/resources/tag/reference
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
